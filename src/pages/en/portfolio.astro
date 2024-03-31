@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/bg.png";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+
+getAbsoluteLocaleUrl("en");
+export const prerender = true;
+
+let title = Astro.props;
+---
+
+<Head title="Filmography" />
+<Layout class="relative">
+  <div class="grid mt-[11.1111%] content-center">
+    <Title text="Filmography" />
+  </div>
+  <!-- ABOUT ME -->
+  <section class="grid px-3 lg:px-0 content-start text-white">
+    <Image
+      src={blur}
+      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+      alt="blur background"
+    />
+    <div class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]">
+      <PortfolioCard
+        videoId="SsC1MI9NvSs?si=QxZcCiTkTOxW0j7s"
+        alt={title}
+        site="https://www.youtube.com/watch?v=SsC1MI9NvSs"
+        title="Table No.21   "
+        description="able No. 21 is a  story that revolves around a couple who live a mediocre life & are thrilled to have won an exotic vacation to Fiji & their excitement increases when they get a chance to play Tell all truth game for a mind boggling prize money The game begins & the couple discovers that the game isn't really a game but is a game of survival."
+      />
+      <PortfolioCard
+        videoId="3BL1il6lmTA?si=ZJ-8KZqzClyKYD45"
+        alt={title}
+        site="https://www.youtube.com/watch?v=3BL1il6lmTA"
+        title="Aa Dekhen Zara"
+        description="Official trailer of the movie Aa Dekhen Zara. "
+      />
+      <PortfolioCard
+        videoId="e0pdoezNhmc?si=lN1wz7Vto-4NRP4l"
+        alt={title}
+        site="https://youtu.be/e0pdoezNhmc"
+        title="Alone"
+        description="The story revolves around conjoined twins Anjana and Sanjana, who had promised to be together always and how the death of one sister leads to a series of chilling incidents that leads the surviving sister to believe that the ghost of her dead twin is haunting her. The film stars Bipasha Basu as Anjana and Sanjana and TV actor Karan Singh Grover, who makes his Bollywood debut with this film."
+      />
+      <PortfolioCard
+        videoId="EJMRk9CTbBY?si=ro9Q7WfGniJAv50z"
+        alt={title}
+        site="https://youtu.be/EJMRk9CTbBY"
+        title="3G"
+        description="Presenting the exclusive theatrical trailer of '3G'- a super natural thriller featuring Neil Nitin Mukesh & Sonal Chauhan. Come & witness the series of events that the couple (Sam & Sheena) face after the purchase of a 3G enabled second hand phone while on a trip to Fiji."
+      />
+      <PortfolioCard
+        videoId="Zf5S3ntloBk?si=Q9ETuWtKS9P4UsKD"
+        alt={title}
+        site="https://youtu.be/Zf5S3ntloBk"
+        title="Guddu Ki Gun "
+        description="able No. 21 is a  story that revolves around a couple who live a mediocre life & are thrilled to have won an exotic vacation to Fiji & their excitement increases when they get a chance to play Tell all truth game for a mind boggling prize money The game begins & the couple discovers that the game isn't really a game but is a game of survival."
+      />
+      <PortfolioCard
+        videoId="Y2L_DWe1mlU?si=U83l9V1J-R8Q_XFt"
+        alt={title}
+        site="https://youtu.be/Y2L_DWe1mlU"
+        title="Bombers  "
+        description="Get ready to cheer for the Bombers, Chandan Nagar’s popular football team. The boys are back and ready to have a go at their opponents. Bombers is a ZEE5 Original starring Varun Mitra, Meiyang Chang, Ranvir Shorey, Aahana Kumra, Prince Narula, Sapna Pabbi, Zakir Hussain and Anup Soni. Enjoy this grand multi-starrer sports drama on ZEE5 premiering on 22 June, exclusively on ZEE5."
+      />
+      <PortfolioCard
+        videoId="nD82ZhhZF_8?si=qUX1xQE5w-_2QCFK"
+        alt={title}
+        site="https://youtu.be/nD82ZhhZF_8"
+        title="Dybbuk"
+        description="Mahi, a newly married woman, brings an antique Jewish box into her home. When Mahi and her husband Sam begin to have paranormal experiences, they soon learn that the box is a dybbuk containing an evil spirit. The couple then seeks the help of a rabbi to unravel its mystery. Will they survive this ordeal before their child is born?"
+      />
+
+      <!-- Add similar PortfolioCard components for other projects -->
+    </div>
+  </section>
+</Layout>

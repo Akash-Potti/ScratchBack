@@ -1,0 +1,96 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/bg.png";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+
+getAbsoluteLocaleUrl("en");
+export const prerender = true;
+
+let title = Astro.props;
+---
+
+<Head title="COMMERCIALS" />
+<Layout class="relative">
+  <div class="grid mt-[11.1111%] content-center">
+    <Title text="Commercials" />
+  </div>
+  <!-- ABOUT ME -->
+  <section class="grid px-3 lg:px-0 content-start text-white">
+    <Image
+      src={blur}
+      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+      alt="blur background"
+    />
+    <div class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]">
+      <PortfolioCard
+        videoId="yIGsjXTJ2ds?si=xiGC4XG-Zxgqq67P"
+        alt={title}
+        site="https://youtu.be/yIGsjXTJ2ds"
+        title="Mercedes Benz"
+        description="Mercedes-Benz TV Commercials video"
+      />
+      <PortfolioCard
+        videoId="GMDjgS_q8gg?si=Hb-y36Xdtu6xvL27"
+        alt={title}
+        site="https://youtu.be/9AY_zSJmxUM"
+        title="Apple iPod Nano 4th Generation"
+        description="Apple iPod Nano 4th Generation Commercials video "
+      />
+      <PortfolioCard
+        videoId="zECBCiWhmwQ?si=EvCLrVIC4oApKOBC"
+        alt={title}
+        site="https://youtu.be/zECBCiWhmwQ"
+        title="Biba Mother's Day Film"
+        description="Biba Mother's Day Commercials video"
+      />
+      <PortfolioCard
+        videoId="LZlLDuxz6Sc?si=eHJtBfrV4TCdmRPL"
+        alt={title}
+        site="https://youtu.be/LZlLDuxz6Sc"
+        title="Travamax Herbal Granules"
+        description="Travamax Herbal Granules Commercials video"
+      />
+      <PortfolioCard
+        videoId="VW2SFe_xE2w?si=i1D79QS4koe7RVJW"
+        alt={title}
+        site="https://youtu.be/VW2SFe_xE2w"
+        title="Nolgripp Hot Granules "
+        description="Nolgripp Hot Granules Commercials video"
+      />
+      <PortfolioCard
+        videoId="emjyuAb0O74?si=gLHdRZdIeaWmyUo9"
+        alt={title}
+        site="https://youtu.be/emjyuAb0O74"
+        title="Cinepar IBU Kids "
+        description="Cinepar Ibu Kid  Commercials video"
+      />
+      <PortfolioCard
+        videoId="CWZuCD27LEY?si=vpZUDkGXcGCaXov2"
+        alt={title}
+        site="https://www.youtube.com/watch?v=CWZuCD27LEY"
+        title="CINEPAR ACTIVE GEL"
+        description="Cinepar Active Gel Commercials video"
+      />
+      <PortfolioCard
+        videoId="DJmfK6hghz8?si=9U4-4zKmvN0Uq_V4"
+        alt={title}
+        site="https://www.youtube.com/watch?v=DJmfK6hghz8"
+        title="Lavna Locks - 1"
+        description="Lavna Locks Commercials video"
+      />
+      <PortfolioCard
+        videoId="wkw7XAsUuqQ?si=u2IPnoq1QnSeHojo"
+        alt={title}
+        site=" https://youtu.be/wkw7XAsUuqQ?si=ZgWJxdZMQQzTn-Cp"
+        title=" Lavna Locks -2"
+        description="Lavna Locks Commercials video"
+      />
+
+      <!-- Add similar PortfolioCard components for other projects -->
+    </div>
+  </section>
+</Layout>

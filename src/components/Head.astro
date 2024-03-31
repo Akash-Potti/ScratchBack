@@ -1,0 +1,32 @@
+---
+import fav from "/favicon.svg";
+import { ViewTransitions } from "astro:transitions";
+
+const { title } = Astro.props;
+---
+
+<!-- HEAD -->
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href={fav.src} />
+  <link
+    rel="preload"
+    href="/styles/reset.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet';"
+  />
+  <link
+    rel="preload"
+    href="/styles/global.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet';"
+  />
+  <script src="/src/assets/js/menu.js" defer></script>
+  <script src="/src/assets/js/animate.js" defer></script>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+  />
+  <title>{title}</title>
+  <ViewTransitions />
+</head>

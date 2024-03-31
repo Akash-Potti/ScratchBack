@@ -1,0 +1,32 @@
+---
+import github from "/src/assets/img/github.svg";
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="py-3 px-5 lg:py-5 lg:px-10">
+  <div class="horizontal-line"></div>
+  <div class="flex justify-between items-center">
+    <div>
+      <h4 class="font-light text-sm lg:text-lg">
+        © 2024 Scratch Back Flims All Rights Reserved
+      </h4>
+    </div>
+  </div>
+</footer>
+
+<script transition:persist>
+  document.addEventListener("astro:page-load", () => {
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    let yearElement = document.getElementById("currentYear");
+    if (yearElement !== null) {
+      yearElement.textContent = String(currentYear);
+    } else {
+      console.error("Element with ID 'currentYear' not found.");
+    }
+  });
+</script>

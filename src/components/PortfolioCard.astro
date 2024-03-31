@@ -1,0 +1,35 @@
+---
+import BadgeLink from "./BadgeLink.astro";
+import Badge from "./Badge.astro";
+import Button from "./Button.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let { description, title, videoId, site } = Astro.props;
+---
+
+<div class="grid blur-bg p-5 lg:p-10 rounded-xl">
+  <div class="grid lg:grid-cols-2">
+    <div class="grid self-start">
+      <iframe
+        class="rounded-2xl lg:h-[350px] lg:w-[500px] w-full h-full min-h-72"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="lg:ml-10">
+      <h3
+        class="font-black !font-gothic bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl lg:text-4xl mb-5 mt-3 lg:mt-0"
+      >
+        {title}
+      </h3>
+
+      <div class="mt-5">
+        <Button text={t("portfolio.externalButton")} link={site} />
+      </div>
+    </div>
+  </div>
+</div>
