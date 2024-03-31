@@ -5,9 +5,7 @@ import Title from "@/components/Title.astro";
 import { Image } from "astro:assets";
 import blur from "/src/assets/img/bg.png";
 import PortfolioCard from "@/components/PortfolioCard.astro";
-import { getAbsoluteLocaleUrl } from "astro:i18n";
 
-getAbsoluteLocaleUrl("en");
 export const prerender = true;
 
 let title = Astro.props;

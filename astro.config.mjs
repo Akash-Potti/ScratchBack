@@ -8,19 +8,8 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   // i18n settings
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "ru", {
-      path: "ru",
-      codes: ["ru", "ru-RU"]
-    }],
-    routing: {
-      prefixDefaultLocale: true
-    },
-    fallback: {
-      ru: "en"
-    }
-  },
+
+
   integrations: [mdx(), compress({
     CSS: true,
     HTML: false,
