@@ -3,6 +3,9 @@ import { Image, Picture } from "astro:assets";
 import logo from "/src/assets/img/Logo PNGArtboard 1_1312.png";
 import blur from "/src/assets/img/bg.svg";
 import SwitchLang from "./SwitchLang.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const t = useTranslations("en");
 ---
 
 <!-- HEADER -->
