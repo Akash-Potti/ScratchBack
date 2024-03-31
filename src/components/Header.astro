@@ -3,10 +3,6 @@ import { Image, Picture } from "astro:assets";
 import logo from "/src/assets/img/Logo PNGArtboard 1_1312.png";
 import blur from "/src/assets/img/bg.svg";
 import SwitchLang from "./SwitchLang.astro";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <!-- HEADER -->
@@ -56,7 +52,7 @@ const t = useTranslations(lang);
               <li
                 class="hover:scale-110 duration-150 transition-all hover:cursor-pointer"
               >
-                <a href={`/${lang}/`} class="hover-link active">
+                <a href={`/`} class="hover-link active">
                   {t("nav.home")}
                 </a>
               </li>
@@ -64,21 +60,21 @@ const t = useTranslations(lang);
               <li
                 class="hover:scale-110 duration-150 transition-all hover:cursor-pointer"
               >
-                <a href={`/${lang}/about/`} class="hover-link">
+                <a href={`/about/`} class="hover-link">
                   {t("nav.about")}
                 </a>
               </li>
               <li
                 class="hover:scale-110 duration-150 transition-all hover:cursor-pointer"
               >
-                <a href={`/${lang}/portfolio/`} class="hover-link">
+                <a href={`/portfolio/`} class="hover-link">
                   {t("nav.filmography")}
                 </a>
               </li>
               <li
                 class="hover:scale-110 duration-150 transition-all hover:cursor-pointer"
               >
-                <a href={`/${lang}/portfolio1/`} class="hover-link">
+                <a href={`/portfolio1/`} class="hover-link">
                   {t("nav.commercial")}
                 </a>
               </li>
