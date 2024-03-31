@@ -3,14 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 import Head from "@/components/Head.astro";
 import { Picture, Image } from "astro:assets";
 import blur from "/src/assets/img/bg.png";
-import cover from "/src/assets/img/ov-main.png";
+import cover from "/src/assets/img/Logo JPGsArtboard 1_712.jpg";
 import Button from "@/components/Button.astro";
 import { getRelativeLocaleUrl, getAbsoluteLocaleUrl } from "astro:i18n";
 
 getAbsoluteLocaleUrl("en");
 export const prerender = true;
-
-const blogURL = getRelativeLocaleUrl("en", "blog");
 ---
 
 <Head title="ScratchBack" />
@@ -35,9 +33,9 @@ const blogURL = getRelativeLocaleUrl("en", "blog");
             >
               <div class="atropos-text">
                 <h1
-                  class="text-7xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
+                  class="text-7xl !font-gothic lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
                 >
-                  Happy to see you here!
+                  Scratch Back Films
                 </h1>
               </div>
 
@@ -45,11 +43,28 @@ const blogURL = getRelativeLocaleUrl("en", "blog");
                 class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10"
               >
                 <blockquote>
-                  Here, you can learn about me, read my blog, and familiarize
-                  yourself with my portfolio. Currently, I am studying
-                  JavaScript and the Astro Framework, and I plan to study the
-                  Vue Framework. I am also interested in Qwik and enjoy learning
-                  new things. Most importantly, I am passionate about my work.
+                  Your story awaits its cinematic masterpiece at Scratch Back
+                  Films. Mumbai-based production house for end-to-end visual
+                  narratives for ad films, Feature films, Long form content &
+                  corporate films. With a passion for crafting compelling
+                  stories, we specialize in scriptwriting, direction,
+                  production, and editing
+                </blockquote>
+              </div>
+              <div
+                class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10"
+              >
+                <blockquote>
+                  <h2 class="!font-gothic text-3xl font-bold">
+                    Scratchers collective approach!
+                  </h2>
+                </blockquote>
+                <blockquote>
+                  We believe in the power of collaboration and actively seek out
+                  partnerships with the right creative minds. From the inception
+                  of an idea to its execution, we work closely with our clients
+                  and a talented pool of professionals to ensure that every
+                  project is a masterpiece.
                 </blockquote>
               </div>
             </div>
@@ -58,7 +73,7 @@ const blogURL = getRelativeLocaleUrl("en", "blog");
       </div>
     </div>
 
-    <div>
+    <div class="h-full grid place-content-stretch">
       <div class="atropos my-atropos">
         <div class="atropos-scale">
           <div class="atropos-rotate">
@@ -74,8 +89,24 @@ const blogURL = getRelativeLocaleUrl("en", "blog");
               <p
                 class="atropos-text text-xl font-extralight tracking-wide mt-5"
               >
-                You can find this site on GitHub, I'm developing it for my
-                portfolio, as well as for blogging.
+                Whether you have a project in mind or simply want to discuss the
+                possibilities, we're here to listen. Reach out to us, and let's
+                create something extraordinary together.
+              </p>
+              <p
+                class="atropos-text text-xl font-extralight tracking-wide mt-5"
+              >
+                <a href="tel:+91 859144 6976">Phone: +91 859144 6976</a>
+              </p>
+              <p
+                class="atropos-text text-xl font-extralight tracking-wide mt-5"
+              >
+                <a href="mailto:shantanu@scratchbackfilms.com">
+                  Email: shantanu@scratchbackfilms.com</a
+                >
+                <a href="mailto:anima@scratchbackfilms.com">
+                  Email: anima@scratchbackfilms.com</a
+                >
               </p>
               <div class="mt-5 atropos-text">
                 <Button
@@ -93,13 +124,17 @@ const blogURL = getRelativeLocaleUrl("en", "blog");
           <div class="atropos-rotate">
             <div class="atropos-inner">
               <div
-                class="mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]"
+                class="mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch h-max blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]"
               >
-                <p class="text-2xl font-light text-white">
-                  Read my blog
-                </p><Button
-                  text="Read blog"
-                  link={blogURL}
+                <p class="text-2xl font-light text-white">Our Works</p><Button
+                  text="Flimography"
+                  link="portfolio"
+                  target="_self"
+                  showIcon={false}
+                />
+                <Button
+                  text="Commercials"
+                  link="portfolio1"
                   target="_self"
                   showIcon={false}
                 />
