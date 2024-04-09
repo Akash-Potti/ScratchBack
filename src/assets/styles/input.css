@@ -15,7 +15,6 @@ html,
 body {
   scroll-behavior: smooth;
   font-display: swap;
-  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
 
