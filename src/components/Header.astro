@@ -1,6 +1,6 @@
 ---
 import { Image, Picture } from "astro:assets";
-import logo from "/src/assets/img/Logo PNGArtboard 1_1312.png";
+import logo from "public/scratchback.svg";
 import blur from "/src/assets/img/bg.svg";
 import SwitchLang from "./SwitchLang.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
@@ -16,9 +16,9 @@ const t = useTranslations("en");
 >
   <a href="/">
     <div class="w-26 z-50 flex items-center">
-      <Image src={logo} width="60" height="60" alt="SBF logo" />
+      <Image src={logo} width="70" height="70" alt="SBF logo" />
       <span
-        class="text-4xl leading-tight font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
+        class="text-2xl leading-tight font-bold bg-clip-text text-transparent bg-white md:text-4xl"
         >Scratch Back Films</span
       >
     </div>
@@ -28,7 +28,7 @@ const t = useTranslations("en");
     <button
       transition:persist
       id="menu-image"
-      class="z-50 p-2 rounded-lg transition-colors duration-150 hover:bg-zinc-800 justify-self-end hover:cursor-pointer"
+      class="z-50 p-2 rounded-lg transition-colors duration-150 hover:bg-[#3F52B1] justify-self-end hover:cursor-pointer"
     >
       <Image
         id="menu-icon"
@@ -40,7 +40,7 @@ const t = useTranslations("en");
       <div class="relative hover:cursor-default">
         <div
           id="main-menu"
-          class="menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-[62px] h-full min-h-screen w-full lg:min-h-[120px] max-w-[1120px] mx-auto rounded-xl"
+          class="menu bg-[#3F52B1]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-[62px] h-full min-h-screen w-full lg:min-h-[120px] max-w-[1120px] mx-auto rounded-b-xl mt-5"
         >
           <Picture
             src={blur}
@@ -63,8 +63,8 @@ const t = useTranslations("en");
               <li
                 class="hover:scale-110 duration-150 transition-all hover:cursor-pointer"
               >
-                <a href={`/about/`} class="hover-link">
-                  {t("nav.about")}
+                <a href={`/team/`} class="hover-link">
+                  {t("nav.team")}
                 </a>
               </li>
               <li

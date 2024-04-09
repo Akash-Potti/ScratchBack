@@ -4,7 +4,7 @@
 
 /** Основные цвета */
 :root {
-  --primary: #f1362a;
+  --primary: #FFCD64;
   --secondary: #2f2929;
   --accent: #ac1694;
   --background: #040404;
@@ -63,7 +63,7 @@ blockquote {
   padding-left: 0.75rem /* 12px */;
   border-left-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(241 54 42 / var(--tw-border-opacity));
+  border-color: rgb(255, 207, 102, 1);
   display: inline-block;
   font-size: 1.25rem /* 20px */;
   line-height: 1.75rem /* 28px */;

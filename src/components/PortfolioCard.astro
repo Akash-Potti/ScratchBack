@@ -22,10 +22,11 @@ let { description, title, videoId, site } = Astro.props;
     </div>
     <div class="lg:ml-10">
       <h3
-        class="font-black !font-gothic bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl lg:text-4xl mb-5 mt-3 lg:mt-0"
+        class="font-black !font-gothic bg-clip-text text-transparent bg-[#FFCD64] text-3xl lg:text-4xl mb-5 mt-3 lg:mt-0"
       >
         {title}
       </h3>
+      <p class="text-lg lg:text-xl">{description}</p>
 
       <div class="mt-5">
         <Button text={t("portfolio.externalButton")} link={site} />

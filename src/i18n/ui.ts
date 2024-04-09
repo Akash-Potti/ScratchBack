@@ -19,7 +19,7 @@ export const languages = {
     en: {
       'nav.home': 'Home',
       'nav.blog': 'Blog',
-      'nav.about': 'About',
+      'nav.team': 'Team',
       'nav.filmography': 'Filmography',
       'nav.commercial': 'Commercial',
       'footer.copyright': 'Copyright © <span id="currentYear"></span> All rights reserved.',

@@ -13,6 +13,7 @@ module.exports = {
 				primary: ['#F1362A'],
 				secondary: ['#18181B'],
 				accent: ['#AC1694'],
+				yellow: "#FFCD64 "
 			},
 			fontFamily: {
 				'gothic':['Engravers Gothic Regular', 'sans-serif']

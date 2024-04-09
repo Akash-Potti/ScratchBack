@@ -1,5 +1,5 @@
 ---
-let { link, text, target, showIcon = true } = Astro.props;
+let { link, text, target, className, showIcon = true } = Astro.props;
 
 target = target || "_blank";
 ---
@@ -7,7 +7,7 @@ target = target || "_blank";
 <a
   href={link}
   target={target}
-  class="inline-block justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150"
+  class={`inline-block justify-self-start px-3 py-2 rounded-lg border-2 hover:border-yellow/20 hover:bg-yellow duration-150 ${className}`}
   >{text}
   {
     showIcon && (

@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import Head from "@/components/Head.astro";
 import { Picture, Image } from "astro:assets";
 import blur from "/src/assets/img/bg.png";
-import cover from "/src/assets/img/Logo JPGsArtboard 1_712.jpg";
+import cover from "/src/assets/img/logo.jpg";
 import Button from "@/components/Button.astro";
 
 export const prerender = true;
@@ -14,33 +14,26 @@ export const prerender = true;
   <!-- HERO -->
 
   <section
-    class="grid gap-x-10 gap-y-10 lg:gap-y-0 place-content-center content-center lg:grid-flow-col lg:auto-cols-max lg:mt-[10rem] 2xl:mt-[15rem] mb-[5rem] px-3 lg:px-0 h-full text-white"
+    class="grid gap-x-10 gap-y-10 lg:gap-y-10 place-content-center content-center lg:grid-flow-row lg:auto-row-max lg:mt-[10rem] 2xl:mt-[15rem] mb-[5rem] px-3 lg:px-0 h-full text-white"
   >
-    <Image
-      src={blur}
-      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
-      alt="blur background"
-    />
-
     <div>
       <div class="atropos my-atropos">
         <div class="atropos-scale">
           <div class="atropos-rotate">
             <div
-              class="atropos-inner blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]"
+              class="atropos-inner blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[1000px]"
             >
               <div class="atropos-text">
                 <h1
-                  class="text-7xl !font-gothic lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
+                  class="text-7xl !font-gothic lg:text-7xl font-black bg-clip-text text-transparent bg-[#FFCD64] lg:mt-10"
                 >
-                  Scratch Back Films
+                  About Us
                 </h1>
               </div>
-
               <div
                 class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10"
               >
-                <blockquote>
+                <blockquote class="border-[#FFCD64]">
                   Your story awaits its cinematic masterpiece at Scratch Back
                   Films. Mumbai-based production house for end-to-end visual
                   narratives for ad films, Feature films, Long form content &
@@ -52,12 +45,12 @@ export const prerender = true;
               <div
                 class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10"
               >
-                <blockquote>
+                <blockquote class="border-[#FFCD64]">
                   <h2 class="!font-gothic text-3xl font-bold">
                     Scratchers collective approach!
                   </h2>
                 </blockquote>
-                <blockquote>
+                <blockquote class="border-[#FFCD64]">
                   We believe in the power of collaboration and actively seek out
                   partnerships with the right creative minds. From the inception
                   of an idea to its execution, we work closely with our clients
@@ -75,18 +68,53 @@ export const prerender = true;
       <div class="atropos my-atropos">
         <div class="atropos-scale">
           <div class="atropos-rotate">
-            <div
-              class="atropos-inner self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]"
-            >
-              <Picture
-                src={cover}
-                class="mx-auto object-cover rounded-xl"
-                alt="cover"
-                formats={["avif", "webp"]}
-              />
-              <p
-                class="atropos-text text-xl font-extralight tracking-wide mt-5"
+            <div class="atropos-inner">
+              <div
+                class="mt-5 flex flex-col gap-2 h-max blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[1000px]"
               >
+                <h1
+                  class="text-7xl !font-gothic lg:text-7xl font-black bg-clip-text text-transparent bg-[#FFCD64]"
+                >
+                  Our Works
+                </h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <Button
+                    className="w-full grid place-items-center text-3xl py-4 hover:!bg-[#FFCD64] hover:!border-[#FFCD64]"
+                    text="Flimography"
+                    link="portfolio"
+                    target="_self"
+                    showIcon={false}
+                  />
+                  <Button
+                    className="w-full grid place-items-center text-3xl py-4 hover:!bg-[#FFCD64] hover:!border-[#FFCD64]"
+                    text="Commercials"
+                    link="portfolio1"
+                    target="_self"
+                    showIcon={false}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="atropos my-atropos">
+      <div class="atropos-scale">
+        <div class="atropos-rotate">
+          <div
+            class="atropos-inner gap-4 items-center !flex !flex-col md:!flex-row self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[1000px]"
+          >
+            <Picture
+              src={cover}
+              class="mx-auto object-cover rounded-xl"
+              height={500}
+              width={500}
+              alt="cover"
+              formats={["avif", "webp"]}
+            />
+            <div>
+              <p class="atropos-text text-xl font-extralight tracking-wide">
                 Whether you have a project in mind or simply want to discuss the
                 possibilities, we're here to listen. Reach out to us, and let's
                 create something extraordinary together.
@@ -102,37 +130,15 @@ export const prerender = true;
                 <a href="mailto:shantanu@scratchbackfilms.com">
                   Email: shantanu@scratchbackfilms.com</a
                 >
-                <a href="mailto:anima@scratchbackfilms.com">
-                  Email: anima@scratchbackfilms.com</a
-                >
               </p>
+              <a
+                class="atropos-text text-xl font-extralight tracking-wide mt-5"
+                href="mailto:anima@scratchbackfilms.com"
+              >
+                Email: anima@scratchbackfilms.com</a
+              >
               <div class="mt-5 atropos-text">
                 <Button text="Check out" link="/about" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="atropos my-atropos">
-        <div class="atropos-scale">
-          <div class="atropos-rotate">
-            <div class="atropos-inner">
-              <div
-                class="mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch h-max blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]"
-              >
-                <p class="text-2xl font-light text-white">Our Works</p><Button
-                  text="Flimography"
-                  link="portfolio"
-                  target="_self"
-                  showIcon={false}
-                />
-                <Button
-                  text="Commercials"
-                  link="portfolio1"
-                  target="_self"
-                  showIcon={false}
-                />
               </div>
             </div>
           </div>
