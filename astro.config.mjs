@@ -4,7 +4,6 @@ import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
 
 import cloudflare from "@astrojs/cloudflare";
-import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
