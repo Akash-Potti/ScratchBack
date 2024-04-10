@@ -26,8 +26,12 @@ export default defineConfig({
   experimental: {
     clientPrerender: true
   },
-  output: "server",
-    adapter: vercel({
-    webAnalytics: { enabled: true }
+  output: "hybrid",
+  adapter: cloudflare({ 
+    mode: 'directory',
+    functionPerRoute: true,
+    routes: {
+      strategy: 'auto'
+    } 
   })
 });
