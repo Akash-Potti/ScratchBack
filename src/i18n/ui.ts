@@ -22,6 +22,8 @@ export const languages = {
       'nav.team': 'Team',
       'nav.filmography': 'Filmography',
       'nav.commercial': 'Commercial',
+      'nav.events': 'Events',
+      'nav.music': 'Music Videos',
       'footer.copyright': 'Copyright © <span id="currentYear"></span> All rights reserved.',
       'portfolio.subDesc': 'Technologies i used:',
       'portfolio.externalButton': 'Check out'

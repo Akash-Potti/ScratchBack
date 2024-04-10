@@ -1,0 +1,52 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/bg.png";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+
+export const prerender = true;
+
+let title = Astro.props;
+---
+
+<Head title="Events" />
+<Layout class="relative">
+  <div class="grid mt-[11.1111%] content-center">
+    <Title text="Events" />
+  </div>
+  <!-- ABOUT ME -->
+  <section class="grid px-3 lg:px-0 content-start text-white">
+    <Image
+      src={blur}
+      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+      alt="blur background"
+    />
+    <div class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]">
+      <PortfolioCard
+        videoId="79RE8jhwqA0?si=oO7-O_Sfr2VWEtFN"
+        alt={title}
+        site="https://www.youtube.com/watch?v=79RE8jhwqA0"
+        title="Aam ka achaar - session 1"
+        description=""
+      />
+      <PortfolioCard
+        videoId="8fIFE5zioHg?si=oVxX5v_I8C6Sz87p"
+        alt={title}
+        site="https://www.youtube.com/watch?v=8fIFE5zioHg"
+        title="Aam ka achaar - session 2"
+        description=""
+      />
+      <PortfolioCard
+        videoId="5teBjkrO5SM?si=BGMH8F7nLu0tL83_"
+        alt={title}
+        site="https://www.youtube.com/watch?v=5teBjkrO5SM"
+        title="Aam ka achaar - session 3"
+        description=""
+      />
+
+      <!-- Add similar PortfolioCard components for other projects -->
+    </div>
+  </section>
+</Layout>

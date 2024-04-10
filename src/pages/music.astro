@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import { Image } from "astro:assets";
+import blur from "/src/assets/img/bg.png";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+
+export const prerender = true;
+
+let title = Astro.props;
+---
+
+<Head title="Music Video" />
+<Layout class="relative">
+  <div class="grid mt-[11.1111%] content-center">
+    <Title text="Music Video" />
+  </div>
+  <!-- ABOUT ME -->
+  <section class="grid px-3 lg:px-0 content-start text-white">
+    <Image
+      src={blur}
+      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+      alt="blur background"
+    />
+    <div class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]">
+      <PortfolioCard
+        videoId="QFzLbV4j3CU?si=LtqcP56ZZ9DVCQ-A"
+        alt={title}
+        site="https://www.youtube.com/watch?v=QFzLbV4j3CU"
+        title="Scratch Back Music Video"
+        description=""
+      />
+
+      <!-- Add similar PortfolioCard components for other projects -->
+    </div>
+  </section>
+</Layout>
