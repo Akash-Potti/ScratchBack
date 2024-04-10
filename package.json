@@ -19,6 +19,7 @@
     "@astrojs/mdx": "^2.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.10",
+    "@vercel/analytics": "^1.2.2",
     "astro": "^4.4.4",
     "astro-compress": "^2.2.10",
     "atropos": "^2.0.2",
